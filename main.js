@@ -19,12 +19,30 @@ async function getWeather(city) {
 }
 
 const weatherColor = {
-  Clear: "#34e7e4",
-  Fog: "#d2dae2",
-  Mist: "#d2dae2",
-  Rain: "#808e9b",
-  Snow: "#f5f6fa",
-  Clouds: "#dcdde1"
+  Clear: {
+    color: "#34e7e4",
+    icon: '🔆'
+  },
+  Snow: {
+    color: "#f5f6fa",
+    icon: '❄️'
+  },
+  Fog: {
+    color: "#d2dae2",
+    icon: '🌁'
+  },
+  Mist: {
+    color: "#d2dae2",
+    icon: '🌁'
+  },
+  Rain: {
+    color: "#808e9b",
+    icon: '☂️'
+  },
+  Clouds: {
+    color: "#dcdde1",
+    icon: '☁️'
+  }
 };
 
 cityInput.addEventListener("input", e => {
@@ -78,8 +96,10 @@ function renderWeather(data) {
   weatherInfo.innerHTML = `
     <h2 class="weather-city">${data.name}</h2>
     <div class="weather-color" style="background: ${
-      weatherColor[data.weather[0].main]
-    }"></div>
+      weatherColor[data.weather[0].main].color
+    }">
+      ${weatherColor[data.weather[0].main].icon}
+    </div>
     <div class="weather-desc">${data.weather[0].main}</div>
     <div class="weather-temp">${data.main.temp}°</div>
   `;

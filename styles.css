@@ -154,10 +154,13 @@ body {
     flex-direction: column;
 }
 
-.weather-color {
+#weather-info .weather-color {
     width: 100px;
     height: 100px;
-    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
     border-radius: 50%;
 }
 
