@@ -6,7 +6,7 @@ import { openPopup, closePopup } from './events';
 
 async function getWeather(city, units) {
   const url = `https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=1a7d76daf845e6d9571a1071f31062f1`;
-  return fetch(url).then((data) => data.json());
+  return fetch(url).then(data => data.json());
 }
 
 function renderWeather(data) {
