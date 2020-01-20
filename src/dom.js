@@ -1,11 +1,11 @@
-const mainInput = document.getElementById("mainInput");
-const loader = document.getElementById("loader");
-const citySubmit = document.getElementById("citySubmit");
-const cityInput = document.getElementById("cityInput");
-const overlay = document.getElementById("overlay");
-const weatherInfo = document.getElementById("weather-info");
-const unitsBtn = document.querySelectorAll(".units-btn");
-const toStart = document.getElementById("toStart");
+const mainInput = document.getElementById('mainInput');
+const loader = document.getElementById('loader');
+const citySubmit = document.getElementById('citySubmit');
+const cityInput = document.getElementById('cityInput');
+const overlay = document.getElementById('overlay');
+const weatherInfo = document.getElementById('weather-info');
+const unitsBtn = document.querySelectorAll('.units-btn');
+const toStart = document.getElementById('toStart');
 
 export {
   mainInput,
@@ -15,5 +15,5 @@ export {
   overlay,
   weatherInfo,
   unitsBtn,
-  toStart
+  toStart,
 };
