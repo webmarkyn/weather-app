@@ -3,7 +3,7 @@ const openPopup = (popup) => {
   popup.style.opacity = '1';
 };
 
-const closePopup = (popup) => new Promise((resolve) => {
+const closePopup = popup => new Promise((resolve) => {
   popup.style.opacity = '0';
   const trans = () => {
     popup.style.visibility = 'hidden';
