@@ -2,7 +2,9 @@
 
 This project is created to practice and get more familiar with API's and async functions, promises end etc. 
 
-you can find the original description in [The Odin Project](https://www.theodinproject.com/courses/javascript/lessons/weather-app)
+![screenshot](./screenshot.png)
+
+You can find the original description in [The Odin Project](https://www.theodinproject.com/courses/javascript/lessons/weather-app)
 
 ## Built With
 
