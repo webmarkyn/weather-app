@@ -1,5 +1,7 @@
 # Weather app
 
+This app is able to provide you temperature information based on the city or region provided.  
+
 This project is created to practice and get more familiar with API's and async functions, promises end etc. 
 
 ![screenshot](./screenshot.png)
@@ -17,7 +19,7 @@ You can find the original description in [The Odin Project](https://www.theodinp
 
 
 ## Getting Started
-you can see the project functionality opening `index.html` inside the directory `dist` 
+You can see the project functionality by opening `index.html` inside the `dist` directory by any browser  
 
 To get a local copy up and running follow these simple example steps.
 `git clone git@github.com:webmarkyn/weather-app.git`
