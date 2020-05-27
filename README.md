@@ -2,7 +2,7 @@
 
 This app is able to provide you temperature information based on given the city or region.  
 
-This project is created to practice and get more familiar with API's and async functions, promises end etc. 
+This project is created to practice and get more familiar with APIs and async functions, promises and, etc. 
 
 ![screenshot](./screenshot.png)
 
