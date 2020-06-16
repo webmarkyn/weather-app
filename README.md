@@ -30,6 +30,12 @@ To get a local copy up and running follow these simple example steps.
 
 - Github: [@webmarkyn](https://github.com/webmarkyn)
 
+## Future updates  
+
+- Improve UI
+- Add Geolocation feature
+- Add common search queries  
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
