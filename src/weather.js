@@ -6,7 +6,14 @@ import { openPopup, closePopup } from './events';
 
 const getWeather = (city, units) => {
   const url = `https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=1a7d76daf845e6d9571a1071f31062f1`;
-  return fetch(url).then(data => data.json());
+  return fetch(url)
+    .then((data) => {
+      if (data.status !== 200) throw new Error('Failed to find city');
+      return data.json();
+    })
+    .catch((err) => {
+      throw new Error(err);
+    });
 };
 
 const renderWeather = (data) => {
@@ -24,16 +31,21 @@ const renderWeather = (data) => {
 
 const loadWeather = (city, units) => {
   openPopup(loader);
-  getWeather(city, units).then((data) => {
-    openPopup(overlay);
-    closePopup(loader);
-    if (data.cod !== 200) {
+  getWeather(city, units)
+    .then((data) => {
+      console.log(data);
+      openPopup(overlay);
+      closePopup(loader);
+      if (data.cod !== 200) {
+        openPopup(mainInput);
+      }
+      closePopup(overlay);
+      renderWeather(data);
+    })
+    .catch((err) => {
+      closePopup(loader);
       openPopup(mainInput);
-    }
-    closePopup(overlay);
-    renderWeather(data);
-  });
+    });
 };
-
 
 export default loadWeather;

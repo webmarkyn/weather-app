@@ -1,179 +1,176 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #fff;
-    transition: 0.1s;
-    /* display: none; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  transition: 0.1s;
+  /* display: none; */
 }
 
 #mainInput {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* display: none; */
-    opacity: 1;
-    visibility: visible;
-    transition: .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .popup {
-    display: flex;
-    flex-direction: column;
-    /* position: relative; */
-    background: white;
-    max-width: 640px;
-    min-width: 320px;
-    align-items: center;
-    border: 2px solid #575fcf;
-    border-radius: 25px;
-    color: #485460;
+  display: flex;
+  flex-direction: column;
+  /* position: relative; */
+  background: white;
+  max-width: 640px;
+  min-width: 320px;
+  align-items: center;
+  border: 2px solid #575fcf;
+  border-radius: 25px;
+  color: #485460;
 }
 
 .popup input {
-    font-size: 20px;
-    padding-left: 15px;
-    border-radius: 20px;
-    border: 2px solid #575fcf;
+  font-size: 20px;
+  padding-left: 15px;
+  border-radius: 20px;
+  border: 2px solid #575fcf;
 }
 
 .popup button {
-    font-size: 20px;
-    text-transform: uppercase;
-    border: none;
-    background: #3c40c6;
-    color: #d2dae2;
-    padding: 5px 25px;
-    border-radius: 3px;
-    position: relative;
-    transition: .2s ease;
-    bottom: 0;
-    opacity: .6;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: none;
+  background: #3c40c6;
+  color: #d2dae2;
+  padding: 5px 25px;
+  border-radius: 3px;
+  position: relative;
+  transition: 0.2s ease;
+  bottom: 0;
+  opacity: 0.6;
 }
 
 .popup button.active {
-    opacity: 1;
+  opacity: 1;
+  cursor: pointer;
 }
 
-.popup button.active:hover {
-    bottom: -2px;
+.popup button.active:hover,
+button:not(#citySubmit):hover {
+  background: #d2dae2;
+  color: #3c40c6;
 }
 
-.popup input, .popup button {
-    margin-bottom: 25px;
+.popup input,
+.popup button {
+  margin-bottom: 25px;
 }
-
-/* .popup .sun {
-    width: 40px;
-    height: 40px;
-    background: yellow;
-    position: relative;
-    border-radius: 50%;
-} */
 
 #loader {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.1s;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.1s;
 }
 
 .loader-circle {
-    width: 120px;
-    height: 120px;
-    background: #575fcf;
-    border-radius: 50%;
-    position: relative;
-    transform: rotate(60deg);
-    animation: loader 2s infinite linear;
-    border: 3px solid #485460;
+  width: 120px;
+  height: 120px;
+  background: #575fcf;
+  border-radius: 50%;
+  position: relative;
+  transform: rotate(60deg);
+  animation: loader 2s infinite linear;
+  border: 3px solid #485460;
 }
 
-.loader-circle:before, .loader-circle:after {
-    content: '';
-    position: absolute;
-    left: 40px;
-    width: 40px;
-    height: 40px;
-    background: #575fcf;
-    border-radius: 50%;
+.loader-circle:before,
+.loader-circle:after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  width: 40px;
+  height: 40px;
+  background: #575fcf;
+  border-radius: 50%;
 }
 .loader-circle:before {
-    top: -80px;
+  top: -80px;
 }
 
 .loader-circle:after {
-    bottom: -80px;
+  bottom: -80px;
 }
 
 #weather {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #weather button {
-    text-transform: uppercase;
-    padding: 5px 20px;
-    background: #8c7ae6;
-    border: none;
-    color: #f5f6fa;
-    cursor: pointer;
-    font-weight: bold;
+  transition: .2s ease;
+  text-transform: uppercase;
+  padding: 5px 20px;
+  background: #8c7ae6;
+  border: none;
+  color: #f5f6fa;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 #weather-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #weather-info .weather-color {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 60px;
-    border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  border-radius: 50%;
 }
 
 #weather div {
-    margin: 10px 0;
-    font-size: 18px;
+  margin: 10px 0;
+  font-size: 18px;
 }
 
 @keyframes loader {
-    from {
-        transform: rotate(0);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Weather app</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div id="overlay"></div>
     <div id="mainInput">
-        <div class="popup">
-            <h2 class="popup-header">Enter your city</h2>
-            <input type="text" placeholder="Your city" id="cityInput">
-            <button id="citySubmit" >next</button>
-            <div class="sun"></div>
-        </div>
+      <div class="popup">
+        <h2 class="popup-header">Enter your city</h2>
+        <input type="text" placeholder="Your city" id="cityInput" />
+        <button id="citySubmit">next</button>
+        <div class="sun"></div>
+      </div>
     </div>
     <div id="loader">
-        <div class="loader-circle"></div>
+      <div class="loader-circle"></div>
     </div>
     <div id="weather">
-        <div id="weather-info">
-            <h2 class="weather-desc">Donetsk</h2>
-            <div class="weather-color"></div>
-            <div class="weather-desc">Cloudy</div>
-            <div class="weather-temp">36</div>
-            <div class="weather-pressure">127</div>
-        </div>
-        <div class="units">
-            <button data-value="metric" class="units-btn">C</button>
-            <button data-value="imperial" class="units-btn">F</button>
-        </div>
-        <button id="toStart">Choose another city</button>
+      <div id="weather-info">
+        <h2 class="weather-desc"></h2>
+        <div class="weather-color"></div>
+        <div class="weather-desc"></div>
+        <div class="weather-temp"></div>
+        <div class="weather-pressure"></div>
+      </div>
+      <div class="units">
+        <button data-value="metric" class="units-btn">C</button>
+        <button data-value="imperial" class="units-btn">F</button>
+      </div>
+      <button id="toStart">Choose another city</button>
     </div>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
