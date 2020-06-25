@@ -166,6 +166,31 @@ button:not(#citySubmit):hover {
   font-size: 18px;
 }
 
+#popupWrapper {
+  position: absolute;
+  top: -200px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  visibility: hidden;
+  transition: .3s ease-out;
+}
+
+#popupWrapper.active {
+  top: 10px;
+  visibility: visible;
+}
+
+.errorPopup {
+  padding: 5px 35px;
+  border-radius: 5px;
+  background: #e74c3c;
+  color: #ecf0f1;
+  text-align: center;
+}
+
 @keyframes loader {
   from {
     transform: rotate(0);

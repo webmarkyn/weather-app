@@ -1,8 +1,8 @@
 import weatherColor from './colors';
 import {
-  loader, overlay, mainInput, weatherInfo,
+  loader, overlay, mainInput, weatherInfo
 } from './dom';
-import { openPopup, closePopup } from './events';
+import { openPopup, closePopup, showError } from './events';
 
 const getWeather = (city, units) => {
   const url = `https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=1a7d76daf845e6d9571a1071f31062f1`;
@@ -43,6 +43,7 @@ const loadWeather = (city, units) => {
       renderWeather(data);
     })
     .catch((err) => {
+      showError(err);
       closePopup(loader);
       openPopup(mainInput);
     });
